@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: tm_raw
+    schema: tm_raw
+    tables:
+      - name: tc_data
+        identifier: tc_data
+      - name: sales
+        identifier: sales
+      - name: customers
+        identifier: customers

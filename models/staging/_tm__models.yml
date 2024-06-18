@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_tm__sales
+    description: "TM Sales with duplicates removed with upsert"
+  - name: stg_tm__customers
+    description: "TM Customers with duplicates removed with upsert"
+    columns:
+      - name: customerid
+        tests:
+          - unique
+          - not_null
+  - name: stg_tm__tc_data
+    description: "TM tc_data with duplicates removed with upsert"
+    columns:
+       - name: tctype
+         tests:
+          - accepted_values:
+              values: ['earned', 'expired', 'spent']
